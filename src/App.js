@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import { Component } from 'react';
+import Sidebar from './pages/shared/Sidebar';
+import Navbar from './pages/shared/Navbar';
+import AppRoutes from './AppRoutes';
+import Footer from './pages/shared/Footer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+class App extends Component {
+render() {
+
+  return(
+    <div className = "container-scroller">
+      {/* Side bar */}
+      <Sidebar />
+      <div className="container-fluid page-body-wrapper">
+        {/* Navbar */}
+        <Navbar />
+        <div className="main-panel">
+          <div className="content-wrapper">
+            {/* All Page Routing */}
+            <AppRoutes/>
+          </div>
+          {/* Footer */}
+          <Footer />
+        </div>
+      </div>
     </div>
-  );
+  )
+}
 }
 
 export default App;
