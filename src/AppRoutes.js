@@ -1,9 +1,13 @@
-import React, { Component } from 'react'
+import React, { Component,Suspense } from 'react'
+import { Switch, Route, Redirect, Router } from 'react-router-dom';
 
-export default class AppRoutes extends Component {
+class AppRoutes extends Component {
   render() {
     return (
-      <div>AppRoutes</div>
+      <Suspense>
+        
+      </Suspense>
     )
   }
 }
+export default AppRoutes;
